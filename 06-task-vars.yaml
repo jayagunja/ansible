@@ -1,4 +1,4 @@
-- name: variables
+- name: Global variables
   hosts: local
   connection: local
   vars: #global variables
@@ -6,7 +6,7 @@
     DURATION: 120HRS
     TRAINER: Jayanthi
   tasks: 
-  - name: print the variable1
+  - name: Local variable1
     vars: #Local variables
       COURSE: "ANSIBLE"
     ansible.builtin.debug:
