@@ -3,7 +3,7 @@
   connection: local
   vars:
     course_name: "DevOps with AWS"
-    duration: 120
+    duration: 120hrs
     topics:
     - linux
     - shell
@@ -16,4 +16,4 @@
   tasks:
   - name: print course information
     ansible.builtin.debug:
-      msg: "Course information {{course_name}}, {{duration}}, {{topics}}, is it live..{{live}}, tools are:{{tools}}"     
+      msg: "Course information Course: {{course_name}}, duration: {{duration}}, topics:{{topics}}, is it live..{{live}}, tools are:{{tools}}"     
