@@ -5,7 +5,13 @@
     COURSE: "DevOps with AWS"
     DURATION: 120HRS
     TRAINER: Jayanthi
-  tasks:   
-  - name: print the variables
+  tasks: 
+  - name: print the variable1
+    vars: #Local variables
+      COURSE: "ANSIBLE"
+    ansible.builtin.debug:
+      msg: "Course is {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}"
+  
+  - name: print the variables2
     ansible.builtin.debug:
       msg: "Course is {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}"
