@@ -4,9 +4,9 @@
   vars_prompt:
   - name: COURSE
     prompt: Please enter course name
-    name: DURATION
+  - name: DURATION
     prompt: Please enter duration
-    name: TRAINER
+  - name: TRAINER
     prompt: Please enter trainer name
   task:
   - name: print course information
