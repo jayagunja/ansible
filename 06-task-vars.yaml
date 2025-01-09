@@ -1,4 +1,4 @@
-- name: Global variables
+- name: variables
   hosts: local
   connection: local
   vars: #global variables
