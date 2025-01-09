@@ -13,7 +13,7 @@
       msg: "Course is {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}"
   
   - name: print the variables2
-      vars:
+    vars:
       COURSE: "ANSIBLE"
     ansible.builtin.debug:
       msg: "Course is {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}}"
