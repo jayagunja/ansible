@@ -9,9 +9,9 @@
     ansible.builtin.shell: ls -ltr > /tmp/output.txt  
 
   - name: execute ls command in command module
-    ansible.builtin.command: lss -ltrr
+    ansible.builtin.command: ls -ltr
     register: command_result
 
   - name: print output of above command
     ansible.builtin.debug:
-      msg: "{{ command_result.failed }}"  
+      msg: "{{ command_result}}"  
