@@ -6,12 +6,10 @@
     ansible.builtin.dnf:
       name: nginx
       state : installed
-      enabled: yes
     when: ansible_os_family == 'RedHat' 
  
   - name: Installing Ubantu in Debian
     ansible.builtin.apt:
       name: nginx
       state : installed
-      enabled: yes
     when: ansible_os_family == 'Debian'       
