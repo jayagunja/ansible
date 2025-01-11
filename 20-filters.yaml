@@ -40,11 +40,17 @@
     ansible.builtin.debug:
       msg: "{{ course | items2dict }}"
 
-  - name: convert lowercase
+  - name: upper to lowercase
     vars:
       name: "JAYAnthi"
     ansible.builtin.debug:
-      msg: "{{ name | lower }}"      
+      msg: "{{ name | lower }}"
+
+  - name: lower to upper
+    vars:
+      name: "jayanthi"
+    ansible.builtin.debug:
+      msg: "{{ name | upper }}"            
 
            
 
