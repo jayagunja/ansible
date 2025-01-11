@@ -11,5 +11,14 @@
     ansible.builtin.debug:
       msg: "{{ fruits | split(',') }}"
 
+  - name: map to list
+    vars:
+      course:
+        name: ansible
+        duration: 120 hrs
+        trainer: jayanthi
+    ansible.builtin.debug:
+      msg: "{{ course | dict2items }}"        
+
 
 
