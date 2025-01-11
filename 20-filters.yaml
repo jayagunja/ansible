@@ -50,7 +50,13 @@
     vars:
       name: "jayanthi"
     ansible.builtin.debug:
-      msg: "{{ name | upper }}"            
+      msg: "{{ name | upper }}" 
+
+  - name: min and max number
+      vars:
+        number : "1,2,5,9"
+      ansible.builtin.debug:
+        msg: "MIN : {{ number | min}} , MAX : {{ number | max }}"                 
 
            
 
