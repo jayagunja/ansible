@@ -3,4 +3,4 @@
   tasks:
   - name: undefined variable handling
     ansible.builtin.debug:
-      msg: "{{ person | 'Jayanthi'}}"
+      msg: "{{ person | 'Jayanthi' }}"
