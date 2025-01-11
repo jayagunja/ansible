@@ -5,7 +5,7 @@
   # - name: execute ls command
     #ansible.builtin.command: ls -ltr > /tmp/output.txt
   
-  - name: execute ls command
+  - name: execute ls command in shell
     ansible.builtin.shell: ls -ltr > /tmp/output.txt  
 
   - name: execute ls command
