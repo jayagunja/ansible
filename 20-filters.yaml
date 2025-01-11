@@ -1,6 +1,7 @@
 - name: handling undefined variable
   hosts: web
   tasks:
+
   - name: undefined variable handling
     ansible.builtin.debug:
       msg: "{{ person | default('Jayanthi') }}"
@@ -18,7 +19,28 @@
         duration: 120 hrs
         trainer: jayanthi
     ansible.builtin.debug:
-      msg: "{{ course | dict2items }}"        
+      msg: "{{ course | dict2items }}" 
+
+  - name: list to map
+    vars:
+     course:  [
+        {
+            "key": "name",
+            "value": "ansible"
+        },
+        {
+            "key": "duration",
+            "value": "120 hrs"
+        },
+        {
+            "key": "trainer",
+            "value": "jayanthi"
+        }
+    ]
+    ansible.builtin.debug:
+      msg: "{{ course | items2dict }}"
+
+           
 
 
 
