@@ -1,0 +1,13 @@
+- name: loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: print names
+    ansible.builtin.debug:
+      msg: {{Item}}
+    loop:
+    - linux
+    - shellscript
+    - ansible
+    - terraform
+
