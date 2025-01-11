@@ -1,0 +1,6 @@
+- name: handling undefined variable
+  hosts: web
+  tasks:
+  - name: undefined variable handling
+    ansible.builtin.debug:
+      msg: "{{ person }}"
