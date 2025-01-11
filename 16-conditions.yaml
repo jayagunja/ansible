@@ -3,13 +3,13 @@
   become: yes
   tasks:
   - name: Installing nginx in RedHat
-    ansible.builtin.package
-      state : state
+    ansible.builtin.package:
+      state : installed
       enabled: yes
     when: {{ ansible_os_family == 'RedHat' }} 
  
   - name: Installing Ubantu in Debian
-    ansible.builtin.apt
-      state : state
+    ansible.builtin.package:
+      state : installed
       enabled: yes
   when: {{ ansible_os_family == 'Debian' }}       
