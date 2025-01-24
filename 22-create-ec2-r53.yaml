@@ -26,4 +26,9 @@
       security_group: "{{ sg_id }}"
       image_id: "{{ aim_id }}"
       instance_type: "{{ instance_type }}"
-    loop: "{{ instances }}"   
+    loop: "{{ instances }}"
+    registers: ec2_info
+
+  - name: print ec2 info data
+    ansible.builtin.debug:
+      msg: "{{ ec2_info }}"     
