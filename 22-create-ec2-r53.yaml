@@ -27,7 +27,7 @@
       image_id: "{{ aim_id }}"
       instance_type: "{{ instance_type }}"
     loop: "{{ instances }}"
-    registers: ec2_info
+    register: ec2_info
 
   - name: print ec2 info data
     ansible.builtin.debug:
