@@ -46,8 +46,7 @@
       value: "{{ item.instances[0].private_ip_address }}"
       wait: true
       overwrite: true 
-    loop:
-      "{{ ec2_info.results }}"
+    loop: "{{ ec2_info.results }}"
       
   - name: create public IP for frontend route53 
     amazon.aws.route53:
@@ -59,7 +58,6 @@
       value: "{{ item.instances[0].public_ip_address }}"
       wait: true
       overwrite: true 
-    loop:
-      "{{ ec2_info.results }}"
+    loop: "{{ ec2_info.results }}"
     when: item.item == "frontend-1"     
       
